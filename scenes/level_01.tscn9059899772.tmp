@@ -1,19 +1,15 @@
-[gd_scene load_steps=12 format=4 uid="uid://degn672t23o64"]
+[gd_scene load_steps=9 format=4 uid="uid://degn672t23o64"]
 
 [ext_resource type="TileSet" uid="uid://cw1ya0l3r0kx" path="res://assets/img/kenney_tiny-dungeon/Tilemap/tileset.tres" id="1_mofoo"]
 [ext_resource type="PackedScene" uid="uid://cev418y48vcit" path="res://scenes/player.tscn" id="2_nr3cb"]
 [ext_resource type="Script" uid="uid://cjlossxtiaaof" path="res://scripts/zone_porte.gd" id="3_j60wy"]
-[ext_resource type="Script" uid="uid://33yiuds6880e" path="res://scenes/zone_message.gd" id="4_llcge"]
 [ext_resource type="PackedScene" uid="uid://dvck1e1585igf" path="res://scenes/magicien_entity.tscn" id="4_nr3cb"]
 [ext_resource type="AudioStream" uid="uid://bccv7p7avncw8" path="res://assets/audio/sfx_door.mp3" id="4_t0ybu"]
 [ext_resource type="PackedScene" uid="uid://bednx52hejro7" path="res://scenes/homme_entity.tscn" id="5_qgxqk"]
 [ext_resource type="PackedScene" uid="uid://brlplgn6xbqjb" path="res://scenes/dague_entity.tscn" id="6_t0ybu"]
-[ext_resource type="Script" uid="uid://dpt04k8r3bxjo" path="res://scenes/door_message.gd" id="8_1b6n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnjyy"]
 size = Vector2(31, 11)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1b6n0"]
 
 [node name="level_01" type="Node2D"]
 
@@ -36,7 +32,6 @@ scale = Vector2(0.478198, 2.4328)
 polygon = PackedVector2Array(75.2826, 80.3329, 138.018, 80.3329, 138.018, 116.094, -46.0061, 116.094, -46.0061, 80.3329, 16.7295, 80.3329, 16.7294, 30.185, -79.465, 30.185, -79.465, 9.63252, -667.088, 9.63251, -667.088, 23.1971, -920.122, 22.7861, -918.03, -24.8956, -662.906, -25.3066, -662.906, -1.05476, 12.5471, -1.05475, 12.5471, -3.52105, 79.465, -3.52105, 79.465, -1.05475, 169.386, -1.05475, 750.735, -0.643703, 225.848, -29.0061, -621.082, -30.2392, -974.492, -31.4724, -976.584, 22.375, -46.0061, 133.358, 133.836, 138.291, 1072.78, 26.0745, 1047.68, -39.2823, 706.82, -32.2945, 711.003, -1.05475, 750.735, -0.643703, 748.644, -25.7177, 1005.86, -25.7177, 1007.95, 24.0192, 752.826, 24.0192, 752.826, 10.0436, 169.386, 10.4546, 169.386, 29.7739, 73.1914, 29.7739)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
-tile_set = ExtResource("1_mofoo")
 
 [node name="porte" type="Area2D" parent="."]
 script = ExtResource("3_j60wy")
@@ -48,13 +43,6 @@ shape = SubResource("RectangleShape2D_rnjyy")
 [node name="sfx_door" type="AudioStreamPlayer2D" parent="porte"]
 stream = ExtResource("4_t0ybu")
 
-[node name="zone_message" type="Area2D" parent="."]
-script = ExtResource("4_llcge")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="zone_message"]
-position = Vector2(64, -69)
-shape = SubResource("RectangleShape2D_rnjyy")
-
 [node name="magicien_entity" parent="." instance=ExtResource("4_nr3cb")]
 position = Vector2(-335, -86)
 
@@ -65,45 +53,6 @@ position = Vector2(465, -88)
 position = Vector2(65, 195)
 
 [node name="player" parent="." instance=ExtResource("2_nr3cb")]
-position = Vector2(64, -61)
-
-[node name="Door_message" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 31.0
-offset_top = -73.0
-offset_right = 71.0
-offset_bottom = -33.0
-script = ExtResource("8_1b6n0")
-
-[node name="ColorRect" type="ColorRect" parent="Door_message"]
-layout_mode = 0
-offset_left = -656.0
-offset_top = -434.0
-offset_right = 685.0
-offset_bottom = 528.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="Door_message"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -35.0
-offset_right = 68.0
-offset_bottom = 14.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "COLLECTE LES
-SACRIFICES"
-label_settings = SubResource("LabelSettings_1b6n0")
-horizontal_alignment = 1
+position = Vector2(64, -59)
 
 [connection signal="body_entered" from="porte" to="porte" method="_on_body_entered"]
-[connection signal="body_exited" from="porte" to="porte" method="_on_body_exited"]
-[connection signal="body_entered" from="zone_message" to="zone_message" method="_on_body_entered"]
-[connection signal="body_exited" from="zone_message" to="zone_message" method="_on_body_exited"]

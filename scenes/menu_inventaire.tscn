@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://btt0bems5rcju" path="res://scenes/inv_menu_homme.tscn" id="3_xr4hj"]
 [ext_resource type="PackedScene" uid="uid://cs3acxfnoy8mq" path="res://scenes/inv_menu_dague.tscn" id="4_ia8t6"]
 
-[node name="menu_inventaire" type="Control"]
+[node name="menu_inventaire_vide" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -20.0

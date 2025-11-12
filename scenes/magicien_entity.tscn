@@ -40,3 +40,4 @@ stream = ExtResource("3_li2vu")
 volume_db = -1.0
 
 [connection signal="body_entered" from="zone_dialogue" to="." method="_on_zone_dialogue_body_entered"]
+[connection signal="finished" from="sfx_scream01" to="." method="_on_sfx_scream_01_finished"]

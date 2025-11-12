@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bednx52hejro7"]
 
-[ext_resource type="Script" uid="uid://0tixgvtub2yy" path="res://scripts/magicien_entity.gd" id="1_00hol"]
+[ext_resource type="Script" uid="uid://ibmwnup1d4rc" path="res://scripts/homme_entity.gd" id="1_p46rf"]
 [ext_resource type="Texture2D" uid="uid://dtlhuqt3arcl3" path="res://assets/img/kenney_tiny-dungeon/Tilemap/tilemap.png" id="2_p46rf"]
 [ext_resource type="AudioStream" uid="uid://dp4kk4wd6evgr" path="res://assets/audio/sfx_scream01.mp3" id="3_p46rf"]
 
@@ -23,7 +23,7 @@ animations = [{
 size = Vector2(18, 17)
 
 [node name="homme_entity" type="Node2D"]
-script = ExtResource("1_00hol")
+script = ExtResource("1_p46rf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4xv6t")
@@ -41,3 +41,4 @@ volume_db = -1.0
 pitch_scale = 1.15
 
 [connection signal="body_entered" from="zone_dialogue" to="." method="_on_zone_dialogue_body_entered"]
+[connection signal="finished" from="sfx_scream01" to="." method="_on_sfx_scream_01_finished"]

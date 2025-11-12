@@ -61,11 +61,9 @@ func _physics_process(_delta: float) -> void:
 	
 func _process(delta):
 	if Input.is_action_just_pressed("e"):
-		print("e")
 		sfx_beh_01.play()
 	
 	if Input.is_action_just_pressed("f"):
-		print("f")
 		sfx_beh_02.play()
 
  
