@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://pib2a7fkkml"]
+[gd_scene load_steps=18 format=4 uid="uid://pib2a7fkkml"]
 
 [ext_resource type="Texture2D" uid="uid://dbtwe7c87esrq" path="res://assets/img/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_pmlnk"]
 [ext_resource type="PackedScene" uid="uid://cev418y48vcit" path="res://scenes/player.tscn" id="2_cgbdd"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://bch0dl47ixmh5" path="res://scenes/magicien_slot.gd" id="5_u2tna"]
 [ext_resource type="PackedScene" uid="uid://dvck1e1585igf" path="res://scenes/magicien_entity.tscn" id="7_b6l7m"]
 [ext_resource type="PackedScene" uid="uid://bednx52hejro7" path="res://scenes/homme_entity.tscn" id="8_u2tna"]
-[ext_resource type="Texture2D" uid="uid://vgdatfglepmc" path="res://assets/img/inventaire/magicien_slot_full.png" id="9_ikbui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ji2ok"]
 texture = ExtResource("1_pmlnk")
@@ -262,12 +261,8 @@ pitch_scale = 1.15
 position = Vector2(280, 152)
 script = ExtResource("5_u2tna")
 
-[node name="filled_slot" type="Sprite2D" parent="magicien_slot"]
-texture = ExtResource("9_ikbui")
-
-[node name="empty_slot" type="Sprite2D" parent="magicien_slot"]
+[node name="Sprite2D" type="Sprite2D" parent="magicien_slot"]
 texture = ExtResource("3_m5641")
-script = ExtResource("5_owl6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="magicien_slot"]
 shape = SubResource("RectangleShape2D_m5641")
@@ -275,7 +270,6 @@ shape = SubResource("RectangleShape2D_m5641")
 [node name="sfx_magicien_scream" type="AudioStreamPlayer2D" parent="magicien_slot"]
 stream = ExtResource("4_64aqs")
 volume_db = -1.0
-pitch_scale = 0.85
 
 [node name="sfx_thud" type="AudioStreamPlayer2D" parent="magicien_slot"]
 stream = ExtResource("4_jm0yl")

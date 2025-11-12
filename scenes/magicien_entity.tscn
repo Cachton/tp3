@@ -38,6 +38,7 @@ shape = SubResource("RectangleShape2D_uklht")
 [node name="sfx_scream01" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_li2vu")
 volume_db = -1.0
+pitch_scale = 0.85
 
 [connection signal="body_entered" from="zone_dialogue" to="." method="_on_zone_dialogue_body_entered"]
 [connection signal="finished" from="sfx_scream01" to="." method="_on_sfx_scream_01_finished"]
