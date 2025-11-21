@@ -1,13 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://cev418y48vcit"]
+[gd_scene load_steps=19 format=3 uid="uid://cev418y48vcit"]
 
 [ext_resource type="Script" uid="uid://d0l53y6voce87" path="res://scripts/character_body_2d.gd" id="1_3vyb7"]
 [ext_resource type="Resource" uid="uid://dtnysvj0rtxrw" path="res://inventaire/inventaire_mouton.tres" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://lwcxtsmabqtk" path="res://assets/img/sheep/sheep_assets.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://dovku2a3vft2h" path="res://assets/img/sheep/sheep_assets_mirroredpng.png" id="4_smehm"]
 [ext_resource type="AudioStream" uid="uid://cmrmkqs0l5bqv" path="res://assets/audio/sfx_sheep_mod_01.wav" id="6_fjrip"]
-[ext_resource type="Script" uid="uid://252oqtjtomkj" path="res://scenes/message_f.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://252oqtjtomkj" path="res://scripts/message_f.gd" id="7_fjrip"]
 [ext_resource type="AudioStream" uid="uid://wjf2bvn2dpy2" path="res://assets/audio/sfx_sheep_mod_02.wav" id="7_smehm"]
-[ext_resource type="Script" uid="uid://d0lsik32t4dcy" path="res://scenes/message_e.gd" id="8_smehm"]
+[ext_resource type="Script" uid="uid://d0lsik32t4dcy" path="res://scripts/message_e.gd" id="8_smehm"]
+[ext_resource type="PackedScene" uid="uid://bmhmcwsaxopp1" path="res://level_03.tscn" id="9_ur7pv"]
+[ext_resource type="Script" uid="uid://uljfvw8w4ica" path="res://level_03.gd" id="10_y4r1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
 size = Vector2(13.1883, 10.7299)
@@ -180,3 +182,15 @@ offset_top = 8.0
 offset_right = 22.0
 offset_bottom = 31.0
 text = "-> E <-"
+
+[node name="menu_fin" parent="." instance=ExtResource("9_ur7pv")]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 575.0
+offset_top = 325.0
+offset_right = 575.0
+offset_bottom = 325.0
+grow_horizontal = 0
+script = ExtResource("10_y4r1p")

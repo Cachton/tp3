@@ -59,7 +59,7 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("e"):
 		sfx_beh_01.play()
 	

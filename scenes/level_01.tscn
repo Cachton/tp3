@@ -3,12 +3,12 @@
 [ext_resource type="TileSet" uid="uid://cw1ya0l3r0kx" path="res://assets/img/kenney_tiny-dungeon/Tilemap/tileset.tres" id="1_mofoo"]
 [ext_resource type="PackedScene" uid="uid://cev418y48vcit" path="res://scenes/player.tscn" id="2_nr3cb"]
 [ext_resource type="Script" uid="uid://cjlossxtiaaof" path="res://scripts/zone_porte.gd" id="3_j60wy"]
-[ext_resource type="Script" uid="uid://33yiuds6880e" path="res://scenes/zone_message.gd" id="4_llcge"]
+[ext_resource type="Script" uid="uid://33yiuds6880e" path="res://scripts/zone_message.gd" id="4_llcge"]
 [ext_resource type="PackedScene" uid="uid://dvck1e1585igf" path="res://scenes/magicien_entity.tscn" id="4_nr3cb"]
 [ext_resource type="AudioStream" uid="uid://bccv7p7avncw8" path="res://assets/audio/sfx_door.mp3" id="4_t0ybu"]
 [ext_resource type="PackedScene" uid="uid://bednx52hejro7" path="res://scenes/homme_entity.tscn" id="5_qgxqk"]
 [ext_resource type="PackedScene" uid="uid://brlplgn6xbqjb" path="res://scenes/dague_entity.tscn" id="6_t0ybu"]
-[ext_resource type="Script" uid="uid://dpt04k8r3bxjo" path="res://scenes/door_message.gd" id="8_1b6n0"]
+[ext_resource type="Script" uid="uid://dpt04k8r3bxjo" path="res://scripts/door_message.gd" id="8_1b6n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnjyy"]
 size = Vector2(31, 11)

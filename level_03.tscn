@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmhmcwsaxopp1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ltuwq"]
+font_size = 40
+
+[node name="menu_fin" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -599.0
+offset_top = -388.0
+offset_right = 609.0
+offset_bottom = 386.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 31.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.015, 2.015)
+text = "Mounetonner
+à
+nouveau!!!"
+
+[node name="Door_message" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 31.0
+offset_top = -73.0
+offset_right = 71.0
+offset_bottom = -33.0
+
+[node name="Label" type="Label" parent="Door_message"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -191.0
+offset_right = 262.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tu est le plus grand mounetonneux au monde.
+À la prochaine fois peut-être."
+label_settings = SubResource("LabelSettings_ltuwq")
+horizontal_alignment = 1
