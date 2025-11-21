@@ -25,5 +25,4 @@ func _process(delta):
 		sfx_thud.play()
 		empty_slot_node.hide_empty_texture()
 		HUD.magicien_pose = true
-		print("magicien fonctionne")
 		first_gate_node.homme_magicien_places()

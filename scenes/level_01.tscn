@@ -56,16 +56,16 @@ position = Vector2(64, -69)
 shape = SubResource("RectangleShape2D_rnjyy")
 
 [node name="magicien_entity" parent="." instance=ExtResource("4_nr3cb")]
-position = Vector2(30, -30)
+position = Vector2(-340, -89)
 
 [node name="homme_entity" parent="." instance=ExtResource("5_qgxqk")]
-position = Vector2(99, -29)
+position = Vector2(467, -81)
 
 [node name="dague_entity" parent="." instance=ExtResource("6_t0ybu")]
-position = Vector2(65, -3)
+position = Vector2(683, 289)
 
 [node name="player" parent="." instance=ExtResource("2_nr3cb")]
-position = Vector2(64, -61)
+position = Vector2(64, 181)
 
 [node name="Door_message" type="Control" parent="."]
 visible = false

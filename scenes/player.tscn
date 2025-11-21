@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://252oqtjtomkj" path="res://scripts/message_f.gd" id="7_fjrip"]
 [ext_resource type="AudioStream" uid="uid://wjf2bvn2dpy2" path="res://assets/audio/sfx_sheep_mod_02.wav" id="7_smehm"]
 [ext_resource type="Script" uid="uid://d0lsik32t4dcy" path="res://scripts/message_e.gd" id="8_smehm"]
-[ext_resource type="PackedScene" uid="uid://bmhmcwsaxopp1" path="res://level_03.tscn" id="9_ur7pv"]
+[ext_resource type="PackedScene" uid="uid://bmhmcwsaxopp1" path="res://scenes/level_03.tscn" id="9_ur7pv"]
 [ext_resource type="Script" uid="uid://uljfvw8w4ica" path="res://level_03.gd" id="10_y4r1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
@@ -185,12 +185,4 @@ text = "-> E <-"
 
 [node name="menu_fin" parent="." instance=ExtResource("9_ur7pv")]
 visible = false
-anchors_preset = 6
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 575.0
-offset_top = 325.0
-offset_right = 575.0
-offset_bottom = 325.0
-grow_horizontal = 0
 script = ExtResource("10_y4r1p")
